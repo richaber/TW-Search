@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: TW Search\n"
-"POT-Creation-Date: 2017-11-29 15:54-0600\n"
-"PO-Revision-Date: 2017-11-29 15:53-0600\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"POT-Creation-Date: 2019-07-15 16:34-0500\n"
+"PO-Revision-Date: 2019-07-15 16:33-0500\n"
+"Last-Translator: Richard Aber <richaber@gmail.com>\n"
+"Language-Team: Richard Aber <richaber@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: tw-search.php\n"
@@ -19,58 +19,84 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: tw-search.php:90
+#: src/Infrastructure/Admin/CustomizeRegister.php:60
 msgid "TW Search Settings"
 msgstr ""
 
-#: tw-search.php:91
+#: src/Infrastructure/Admin/CustomizeRegister.php:61
 msgid "Customize the search settings."
 msgstr ""
 
-#: tw-search.php:112
+#: src/Infrastructure/Admin/CustomizeRegister.php:82
 msgid "Overlay Background"
 msgstr ""
 
-#: tw-search.php:116
+#: src/Infrastructure/Admin/CustomizeRegister.php:86
 msgid "Dark"
 msgstr ""
 
-#: tw-search.php:117
+#: src/Infrastructure/Admin/CustomizeRegister.php:87
 msgid "Light"
 msgstr ""
 
-#: tw-search.php:138
+#: src/Infrastructure/Admin/CustomizeRegister.php:108
 msgid "Add To Menu"
 msgstr ""
 
-#: tw-search.php:165
+#: src/Infrastructure/Admin/CustomizeRegister.php:135
 msgid "Display As"
 msgstr ""
 
-#: tw-search.php:169 tw-search.php:194 tw-search.php:198
+#: src/Infrastructure/Admin/CustomizeRegister.php:139
+#: src/Infrastructure/Admin/CustomizerMagnifyingGlass.php:69
+#: src/Infrastructure/Admin/CustomizerMagnifyingGlass.php:73
 msgid "Magnifying Glass Icon"
 msgstr ""
 
-#: tw-search.php:170
+#: src/Infrastructure/Admin/CustomizeRegister.php:140
 msgid "Search (word)"
 msgstr ""
 
-#: tw-search.php:171
+#: src/Infrastructure/Admin/CustomizeRegister.php:141
 msgid "Both"
 msgstr ""
 
-#: tw-search.php:227 tw-search.php:233
-msgid "input search string and hit enter"
+#: src/Infrastructure/Admin/CustomizeRegister.php:157
+msgid "None (use .js-twSearch class)"
 msgstr ""
 
-#: tw-search.php:229 tw-search.php:398 tw-search.php:401 tw-search.php:404
+#: src/Infrastructure/WpNavMenuItems.php:164
+#: src/Infrastructure/WpNavMenuItems.php:167
+#: src/Infrastructure/WpNavMenuItems.php:170
+#: template-parts/tw-search-form.php:59
 msgid "Search"
 msgstr ""
 
-#: tw-search.php:464
-msgid "None (use .js-twSearch class)"
+#: src/Utility/UserUtility.php:27
+msgid "-- Select --"
+msgstr ""
+
+#: template-parts/tw-search-form.php:35
+msgid "Site Search Dialog"
+msgstr ""
+
+#: template-parts/tw-search-form.php:39
+msgid "Enter your search phrase to search this site."
+msgstr ""
+
+#: template-parts/tw-search-form.php:47
+msgid "Input your search term and press enter."
+msgstr ""
+
+#: template-parts/tw-search-form.php:51 template-parts/tw-search-form.php:63
+msgid "input search string and hit enter"
+msgstr ""
+
+#: template-parts/tw-search-form.php:55 template-parts/tw-search-form.php:56
+msgid "Cancel"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

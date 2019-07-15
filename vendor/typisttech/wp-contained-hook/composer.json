@@ -1,0 +1,82 @@
+{
+    "name": "typisttech/wp-contained-hook",
+    "description": "Using PSR-11 container implementation in WordPress plugins, themes and packages during WordPress action/filter callbacks.",
+    "keywords": [
+        "action",
+        "container",
+        "dependency",
+        "di",
+        "filter",
+        "hook",
+        "injection",
+        "psr11",
+        "wordpress",
+        "wp"
+    ],
+    "homepage": "https://typist.tech/projects/wp-contained-hook",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Typist Tech",
+            "email": "wp-contained-hook@typist.tech",
+            "homepage": "https://typist.tech"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://typist.tech",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "psr/container": "^1.0",
+        "psr/container-implementation": "^1.0"
+    },
+    "require-dev": {
+        "10up/wp_mock": "^0.3.0",
+        "automattic/vipwpcs": "dev-master",
+        "codeception/base": "^2.3",
+        "league/container": "^3.2",
+        "roave/security-advisories": "dev-master",
+        "wp-coding-standards/wpcs": "^1.0"
+    },
+    "suggest": {
+        "typisttech/imposter-plugin": "Wrap all composer vendor packages inside your own namespace, to prevent collisions when multiple plugins use this library"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "TypistTech\\WPContainedHook\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TypistTech\\WPContainedHook\\Test\\": "tests/unit"
+        }
+    },
+    "scripts": {
+        "check-style": "phpcs --standard=ruleset.xml --colors -p -s .",
+        "pretag": [
+            "composer update",
+            "@test",
+            "composer normalize",
+            "doctoc README.md",
+            "github_changelog_generator --no-verbose"
+        ],
+        "test": "codecept run",
+        "test:coverage": "codecept run --coverage --coverage-html --coverage-xml"
+    },
+    "support": {
+        "email": "wp-contained-hook@typist.tech",
+        "issues": "https://github.com/TypistTech/wp-contained-hook/issues",
+        "source": "https://github.com/TypistTech/wp-contained-hook"
+    }
+}

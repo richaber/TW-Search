@@ -6,6 +6,10 @@
     height: 1px;
     overflow:hidden;
 }
+
+/**
+ * Beaver Builder theme's flyout mobile nav is set to z-index 999999!
+ */
 .twSearchPopup {
     display: none;
     position: fixed;
@@ -13,7 +17,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: 1000000;
 }
 
 .twSearchBg {
@@ -22,6 +26,12 @@
     right: 0;
     left: 0;
     bottom: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.twSearchContent {
 }
 
 .twSearchBg-dark {
@@ -80,21 +90,55 @@
     opacity: 0;
 }
 
+.twSearchForm .twSearchBox:focus {
+    outline:none;
+    border:1px solid #4D90FE;
+    -webkit-box-shadow: 0px 0px 5px  #4D90FE;
+    box-shadow: 0px 0px 5px  #4D90FE;
+}
+
 .twSearchForm label {
     position: absolute;
     left: -9999px;
 }
 
-.twSearchForm input[type=submit],
-.twSearchForm input[type=submit]:focus,
-.twSearchForm input[type=submit]:active {
+.twSearchFormControls {
+}
+
+.twSearchForm .twSearchClose,
+.twSearchForm .twSearchClose:focus,
+.twSearchForm .twSearchClose:active {
+    font-size: 30px;
+    margin-top: 10px;
+    position: absolute;
+    right: 140px;
+    line-height: 1.2;
+    top: auto;
+}
+
+.twSearchForm .twSearchClose:focus {
+    outline:none;
+    border:1px solid #4D90FE;
+    -webkit-box-shadow: 0px 0px 5px  #4D90FE;
+    box-shadow: 0px 0px 5px  #4D90FE;
+}
+
+.twSearchForm .twSearchButton,
+.twSearchForm .twSearchButton:focus,
+.twSearchForm .twSearchButton:active {
     font-size: 30px;
     margin-top: 10px;
     position: absolute;
     right: 0;
     line-height: 1.2;
     top: auto;
+}
 
+.twSearchForm .twSearchButton:focus {
+    outline:none;
+    border:1px solid #4D90FE;
+    -webkit-box-shadow: 0px 0px 5px  #4D90FE;
+    box-shadow: 0px 0px 5px  #4D90FE;
 }
 
 .twSearchBoxDesc {
@@ -114,9 +158,16 @@
         margin: 7em 2em;
     }
 
-    .twSearchForm input[type=submit],
-    .twSearchForm input[type=submit]:focus,
-    .twSearchForm input[type=submit]:active {
+    .twSearchForm .twSearchClose,
+    .twSearchForm .twSearchClose:focus,
+    .twSearchForm .twSearchClose:active {
+        font-size: 20px;
+        right: 100px;
+    }
+
+    .twSearchForm .twSearchButton,
+    .twSearchForm .twSearchButton:focus,
+    .twSearchForm .twSearchButton:active {
         font-size: 20px;
     }
 
