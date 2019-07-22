@@ -46,7 +46,7 @@ class RegisterPostTypes implements ConfigurableInterface, HookableInterface {
 			return;
 		}
 
-		$this->set_config( new Config( $config_file ) );
+		$this->set_config( new Config( require $config_file ) );
 	}
 
 	/**
