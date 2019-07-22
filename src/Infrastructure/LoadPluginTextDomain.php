@@ -40,7 +40,13 @@ class LoadPluginTextDomain implements ConfigurableInterface, HookableInterface {
 	 * Configure this class.
 	 */
 	public function configure(): void {
-		$this->set_config( new Config( require DirectoryUtility::get_plugin_config_path() . basename( __FILE__ ) ) );
+		$config_file = DirectoryUtility::get_plugin_config_path() . basename( __FILE__ );
+
+		if ( ! is_readable( $config_file ) ) {
+			return;
+		}
+
+		$this->set_config( new Config( $config_file ) );
 	}
 
 	/**
@@ -58,7 +64,7 @@ class LoadPluginTextDomain implements ConfigurableInterface, HookableInterface {
 	 * Load plugin text domain.
 	 */
 	public function load_plugin_textdomain() {
-		if ( ! $this->config->has( static::class ) ) {
+		if ( null === $this->config || ! $this->config->has( static::class ) ) {
 			return;
 		}
 

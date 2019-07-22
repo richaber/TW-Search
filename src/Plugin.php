@@ -56,7 +56,7 @@ class Plugin implements ActivateableInterface, DeactivateableInterface, Register
 
 		$this->hook_loader = new Loader( $this->container );
 
-		if ( ! $this->config->has( static::class ) ) {
+		if ( null === $this->config || ! $this->config->has( static::class ) ) {
 			return;
 		}
 
@@ -76,7 +76,13 @@ class Plugin implements ActivateableInterface, DeactivateableInterface, Register
 	 * @return void
 	 */
 	public function configure(): void {
-		$this->set_config( new Config( require DirectoryUtility::get_plugin_config_path() . \basename( __FILE__ ) ) );
+		$config_file = DirectoryUtility::get_plugin_config_path() . basename( __FILE__ );
+
+		if ( ! is_readable( $config_file ) ) {
+			return;
+		}
+
+		$this->set_config( new Config( $config_file ) );
 	}
 
 	/**
