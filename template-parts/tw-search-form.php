@@ -24,11 +24,13 @@ if ( empty( $tw_search_color ) ) {
 
 ?>
 
-<div class="twSearchPopup">
+<div class="twSearchDialogBackdrop twSearchBg-<?php echo \esc_attr( $tw_search_color ); ?>">
 
-	<div class="twSearchBg twSearchBg-<?php echo \esc_attr( $tw_search_color ); ?>" tabindex="-1"></div>
-
-	<div class="twSearchContent" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description"
+	<div id="twSearchDialog"
+		 class="twSearchContent twSearchHidden"
+		 role="dialog"
+		 aria-labelledby="dialog-title"
+		 aria-describedby="dialog-description"
 		 aria-modal="true">
 
 		<h1 id="dialog-title" class="screen-reader-text">
